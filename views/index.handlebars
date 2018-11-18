@@ -1,0 +1,51 @@
+<h1>burgers!</h1>
+
+<div class="container">
+  
+  <form class="create-form">
+    <h2>Add a Burger</h2>
+    <div class="form-group">
+      <label for="ca">Burger Order:</label>
+      <input type="text" id="newBurgerHTML" burger_name="burger_name">
+    </div>
+
+    <div class="form-group">
+      <label for="devoured"></label><br>
+      {{!-- <input type="radio" name="devoured" value="1" checked> devoured!<br>
+      <input type="radio" name="devoured" value="0"> Awake --}}
+    </div>
+
+
+    <button id="submit" type="submit" value="Submit" class = "btn btn-2 btn-2g">Submit</button>
+  </form>
+</div>
+
+<div id="stats">
+    <div class = "devourNot format">
+      <h2>Order Completed!</h2>
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block devour=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    
+    <div class = "devour format">
+      <h2>Devoured!</h2>
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            <li>
+              {{this.burger_name}}
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+    
+</div>
+
+

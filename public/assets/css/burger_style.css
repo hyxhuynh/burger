@@ -1,0 +1,116 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../img/burger-background.jpg");
+	background-size: cover;
+}
+
+.container {
+    margin: 30px 0 auto;
+    color: orange;
+    display: flex;
+    justify-content: center;
+}
+
+.devour, .devourNot {
+    width: 25%;
+    height: auto;
+}
+
+.format {
+    border: solid black 2px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: orange;
+}
+
+#stats{
+    display: flex;
+    align-items: flex-end;
+    /* flex-wrap: wrap;
+    justify-content: space-around; */
+}
+
+
+
+/* Button style from https://tympanus.net/Development/CreativeButtons/ */
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 15px 50px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 2 */
+.btn-2 {
+	background: #cb4e4e;
+	color: #fff;
+	box-shadow: 0 6px #ab3c3c;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+/* Button 2g */
+.btn-2g {
+	border-radius: 40px;
+}
+
+.btn-2g:hover {
+	box-shadow: 0 4px #ab3c3c;
+	top: 2px;
+}
+
+.btn-2g:active {
+	box-shadow: 0 0 #ab3c3c;
+	top: 6px;
+}
+
+
+li {
+	list-style-image: url("../img//favicon-32x32.png");
+	padding: 5px;
+	margin: 5px;
+	background: #faebd7;
+  }
+  
+  .label {
+	font-weight: bold;
+  }
+  
+  .create-update-form {
+	padding: 5px;
+	margin: 5px;
+	background: aqua;
+  }
+  
+  .form-group {
+	margin-bottom: 5px;
+  }
+
