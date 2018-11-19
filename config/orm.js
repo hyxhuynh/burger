@@ -41,6 +41,8 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
+  // =========== SELECT ALL ===========
+  // Function to display all data from the table in MySQL database
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
@@ -50,6 +52,10 @@ var orm = {
       cb(result);
     });
   },
+
+  // =========== INSERT ONE ===========
+  // Function to insert data into the table in MySQL database
+  // Column name needed to be specified for the values to be inserted
   insertOne: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -70,6 +76,9 @@ var orm = {
       cb(result);
     });
   },
+
+  // =========== UDATE ONE ===========
+  // Function to update data in the table in MySQL database
   // An example of objColVals would be {name: panther, sleepy: true}
   updateOne: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
@@ -88,19 +97,6 @@ var orm = {
       cb(result);
     });
   },
-//   delete: function(table, condition, cb) {
-//     var queryString = "DELETE FROM " + table;
-//     queryString += " WHERE ";
-//     queryString += condition;
-
-//     connection.query(queryString, function(err, result) {
-//       if (err) {
-//         throw err;
-//       }
-
-//       cb(result);
-//     });
-//   }
 };
 
 // Export the orm object for the model (burgers.js).

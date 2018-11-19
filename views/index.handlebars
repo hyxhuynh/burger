@@ -1,5 +1,3 @@
-<h1>burgers!</h1>
-
 <div class="container">
   
   <form class="create-form">
@@ -11,8 +9,6 @@
 
     <div class="form-group">
       <label for="devoured"></label><br>
-      {{!-- <input type="radio" name="devoured" value="1" checked> devoured!<br>
-      <input type="radio" name="devoured" value="0"> Awake --}}
     </div>
 
 
@@ -26,7 +22,7 @@
       <ul>
         {{#each burgers}}
           {{#unless devoured}}
-            {{> burgers/burger-block devour=true}}
+            {{> burgers/burger-block}}
           {{/unless}}
         {{/each}}
       </ul>
